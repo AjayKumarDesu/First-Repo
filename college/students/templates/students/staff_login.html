@@ -1,0 +1,9 @@
+<h1>Staff Login</h1>
+<form action="/students/staff_validate/" method="post">
+    {% csrf_token %}
+    Username<input type="text" name="username"><br>
+    Password<input type="password" name="password"><br>
+    <input type="submit" value="Login"><br>
+
+</form>
+    <a href="/students/">Back</a>

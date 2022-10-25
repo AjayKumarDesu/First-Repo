@@ -1,0 +1,13 @@
+<h1>Details</h1>
+
+<b>Name:</b>{{user.register.Student.student_name}}<br>
+<b>Email:</b>{{user.register.Student.student_email}}<br>
+<b>Phone:</b>{{user.register.Student.student_phone}}<br>
+<b>Ssc Marks:</b>{{user.register.Student.ssc_marks}}<br>
+<b>Inter Marks:</b>{{user.register.Student.inter_marks}}<br>
+<b>Department:</b>{{user.register.department.code}}<br>
+<b>Photo</b><img src="{{user.register.image.url}}" style="height:100px"/><br>
+
+<a href="/students/logout/">logout</a><br>
+<a href="/students/total_staff/">Staff List</a><br>
+<a href="/students/{{user.register.department.code}}/details/">Student List</a><br/>

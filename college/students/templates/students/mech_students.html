@@ -1,0 +1,30 @@
+{% if student %}
+ <table border="1">
+     <thead>
+ <tr>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Email Id</th>
+            <th>Phone</th>
+ </tr>
+     </thead>
+       <tbody>
+ {% for each in student %}
+ <tr>
+           <td>{{each.Student.student_name}}</td>
+           <td>{{each.department.code}}</td>
+           <td>{{each.Student.student_email}}</td>
+           <td>{{each.Student.student_phone}}</td>
+ </tr>
+ {% endfor %}
+ {% else %}
+           <h3>No data available</h3>
+{% endif %}
+
+       </tbody>
+
+
+
+ </table>
+<a href="/students/staff_logout/">Logout</a><br>
+<a href="/students/total_students/">Back</a><br>

@@ -1,0 +1,30 @@
+<h1>Staff Registration</h1>
+
+<form action="/students/save_staff/" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    Name <input type="text" name="name"><br>
+    <br>
+    Email <input type="text" name="email"><br>
+    <br>
+    Mobile<input type="text" name="phone"><br>
+    <br>
+    Department:
+    <select name="code">
+    {% for each in deps %}
+        <option value={{each.code}}>{{each.code}}</option>
+    {% endfor %}
+</select><br>
+    Qualification<input type="text" name="qualification"><br>
+    <br>
+    Experience<input type="text" name="experience"><br>
+    <br>
+    photo<input type="file" name="image"><br>
+    <br>
+    Username<input type="text" name="username"><br>
+    Password<input type="text" name="password"><br>
+
+    <input type="submit" value="Register"><br>
+
+</form>
+    <a href="/students/">Back</a>

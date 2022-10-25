@@ -1,0 +1,23 @@
+{% if error %}
+<h3>{{error}}</h3>
+{% endif %}
+
+<h1>New Application</h1>
+<form action="/students/save/" method="post">
+    {% csrf_token %}
+
+    Name <input type="text" name="name"><br>
+    <br>
+    Email<input type="text" name="Email"><br>
+    <br>
+    Mobile<input type="text" name="Phone"><br>
+    <br>
+    ssc_marks<input type="file" name="ssc_marks"><br>
+    <br>
+    inter_marks<input type="file" name="inter_marks"><br>
+    <br>
+    <input type="submit" value="Apply"><br><br>
+
+
+</form>
+    <a href="/students/">Back</a><br>
